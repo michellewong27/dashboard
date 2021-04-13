@@ -16,6 +16,8 @@ import { AreaComponent } from './widgets/area/area.component';
 import { ChartsModule } from 'ng2-charts';
 import { CardComponent } from './widgets/card/card.component';
 import { RadarComponent } from './widgets/radar/radar.component';
+import { BarChartComponent } from './widgets/bar-chart/bar-chart.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { RadarComponent } from './widgets/radar/radar.component';
     SidebarComponent,
     AreaComponent,
     CardComponent,
-    RadarComponent
+    RadarComponent,
+    BarChartComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,8 @@ import { RadarComponent } from './widgets/radar/radar.component';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    ChartsModule
+    ChartsModule,
+    HighchartsChartModule
   ],
   //add exports for components created
   exports: [
@@ -46,7 +50,8 @@ import { RadarComponent } from './widgets/radar/radar.component';
     SidebarComponent,
     AreaComponent,
     CardComponent,
-    RadarComponent
+    RadarComponent,
+    BarChartComponent
   ]
 })
 export class SharedModule { }
