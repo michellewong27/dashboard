@@ -21,7 +21,7 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     RouterModule,
     SharedModule,
-    //import this module to use for sidebar
+    //import specific module for specific functionality within material
     MatSidenavModule,
     MatDividerModule,
     FlexLayoutModule,

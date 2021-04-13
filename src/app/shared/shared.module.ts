@@ -14,6 +14,8 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { AreaComponent } from './widgets/area/area.component';
 import { ChartsModule } from 'ng2-charts';
+import { CardComponent } from './widgets/card/card.component';
+import { RadarComponent } from './widgets/radar/radar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ChartsModule } from 'ng2-charts';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent
+    AreaComponent,
+    CardComponent,
+    RadarComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +44,9 @@ import { ChartsModule } from 'ng2-charts';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent
+    AreaComponent,
+    CardComponent,
+    RadarComponent
   ]
 })
 export class SharedModule { }
