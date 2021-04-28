@@ -1,14 +1,18 @@
 <div class="container" *ngIf="articleOpen">
   <div *ngFor="let article of articles" class="articles-container">
     <div class="article-card">
-      <h4 (click)="openArticle(article.title,article.content)">{{article.title}}</h4>
+      <h4 (click)="openArticle(article.title,article.content, article.author)">{{article.title}}</h4>
     </div>
   </div>
 </div>
 
  <div *ngIf="!articleOpen">
   <div class="opened-article">
-      <h3>{{articleTitle}}</h3>
-      <h3>{{articleContent}}</h3>
+      <button (click)='backToHomepage()' class="previous round">&#8249;</button> 
+      <div class="article-text">
+        <h2 class="article-title">{{articleTitle}}</h2>
+        <h4>By {{articleAuthor}}</h4>
+        <h3 class="article-content">{{articleContent}}</h3>
+      </div>
   </div>
 </div>

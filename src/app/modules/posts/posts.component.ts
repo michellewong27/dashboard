@@ -15,6 +15,7 @@ export class PostsComponent implements OnInit {
   articleOpen:boolean = true;
   articleContent: string = '';
   articleTitle: string = '';
+  articleAuthor:string='';
   apiUrl: string = 'https://newsapi.org/v2/top-headlines?country=us&q=covid&from=2021-03-28&sortBy=publishedAt&apiKey='
   apiKey : string = 'b0007f2a7ae04cbaa585b2b20903763f'
 
@@ -30,10 +31,15 @@ export class PostsComponent implements OnInit {
     })
   }
 
-  openArticle(articleTitle:string, articleContent:string){
+  openArticle(articleTitle:string, articleContent:string, articleAuthor:string){
     this.articleOpen = !this.articleOpen;
     this.articleTitle = articleTitle;
+    this.articleAuthor= articleAuthor;
     this.articleContent = articleContent;  
+  }
+
+  backToHomepage(){
+    this.articleOpen = !this.articleOpen;
   }
 
 }
