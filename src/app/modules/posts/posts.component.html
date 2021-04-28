@@ -1,1 +1,13 @@
-<p>posts works!</p>
+<div class="container" *ngIf="articleOpen">
+  <div *ngFor="let article of articles" class="articles-container">
+    <div class="article-card">
+      <h4 (click)="openArticle(article.url)">{{article.title}}</h4>
+    </div>
+  </div>
+</div>
+
+ <div *ngIf="!articleOpen">
+  <div class="opened-article">
+      <h4>Article Content here</h4>
+  </div>
+</div>
