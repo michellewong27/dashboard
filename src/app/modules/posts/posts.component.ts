@@ -8,11 +8,16 @@ import {Post } from '../posts/post';
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss']
 })
+
 export class PostsComponent implements OnInit {
   articles: Post[] = [];
+  openedArticle: Object = {};
   articleOpen:boolean = true;
+  articleContent: string = '';
+  articleTitle: string = '';
   apiUrl: string = 'https://newsapi.org/v2/top-headlines?country=us&q=covid&from=2021-03-28&sortBy=publishedAt&apiKey='
   apiKey : string = 'b0007f2a7ae04cbaa585b2b20903763f'
+
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
@@ -25,11 +30,10 @@ export class PostsComponent implements OnInit {
     })
   }
 
-  openArticle(articleUrl:string){
-    console.log("in article now", articleUrl)
-    //toggle articleOpen
+  openArticle(articleTitle:string, articleContent:string){
     this.articleOpen = !this.articleOpen;
-    //find article based on url given
+    this.articleTitle = articleTitle;
+    this.articleContent = articleContent;  
   }
 
 }
