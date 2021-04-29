@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   constructor() { }
+  notificationsOn: boolean = true;
 
   ngOnInit(): void {
   }
 
+  toggleNotifications(){
+    this.notificationsOn = !this.notificationsOn;
+  }
 }

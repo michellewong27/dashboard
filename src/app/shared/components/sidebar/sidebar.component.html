@@ -2,28 +2,39 @@
   <div class="profile-card">
     <div class="header">
       <h2>Michelle Wong</h2>
-      <h4>michelle@gmail.com</h4>
     </div>
-    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="michelle">
+    <img src="http://petapixel.com/assets/uploads/2017/10/8b1f3005-6807-4bd3-acbd-6e3d2bf65b2a-800x640.jpg" alt="michelle">
   </div>
 
   <mat-divider></mat-divider>
 
   <h2 matSubheader>Pages</h2>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Home</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">News Articles</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/blogs">Blog Posts</a>
 
   <mat-divider></mat-divider>
 
-  <h2 matSubheader>Tools</h2>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-  <mat-icon>import_contacts</mat-icon>
-    Contacts
+  <h2 matSubheader>Social Media</h2>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/newgroup">
+  <mat-icon>group_add</mat-icon>
+    Create new group
   </a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-  <mat-icon>contact_phone</mat-icon>
-    Leads
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/share">
+  <mat-icon>share</mat-icon>
+    Share
+  </a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/poll">
+  <mat-icon>poll</mat-icon>
+    Create a poll
+  </a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/notifications" (click)="toggleNotifications()" *ngIf="notificationsOn">
+    <mat-icon >notifications_active</mat-icon>
+      Silence Notifications
+  </a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/notifications" (click)="toggleNotifications()" *ngIf="!notificationsOn" >
+    <mat-icon >notifications_off</mat-icon>
+      Turn On Notifications
   </a>
 
 

@@ -1,4 +1,3 @@
-
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Post } from '../posts/post';
@@ -40,7 +39,6 @@ export class PostsComponent implements OnInit {
     this.articleDescription = articleDescription;
     this.articleContent = articleContent;  
     this.articleImg= articleImg;
-  
   }
 
   backToHomepage(){
