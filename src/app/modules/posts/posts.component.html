@@ -1,17 +1,16 @@
-<div class="container" *ngIf="articleOpen">
-  <div *ngFor="let article of articles" class="articles-container">
-    <div class="article-card">
-      <h4 (click)="openArticle(article.title, article.description,article.content,article.urlToImage)">{{article.title}}</h4>
-    </div>
+<div class="grid-container" *ngIf="articleOpen">
+  <div *ngFor="let article of articles" class="article-card">
+      <h2 class="article-headlines" (click)="openArticle(article.title, article.description,article.content,article.urlToImage)">{{article.title}}</h2>
+      <img src={{article.urlToImage}} class="header-img" >
   </div>
 </div>
 
- <div *ngIf="!articleOpen">
+ <div *ngIf="!articleOpen"> 
   <div class="opened-article">
       <button (click)='backToHomepage()' class="previous round"><b>&#8249;</b></button> 
       <div class="article-text">
         <h2 class="article-title">{{articleTitle}}</h2>
-        <img src={{articleImg}} class="article-img"/>
+        <img src={{articleImg}} class="article-img">
         <h3 class="article-content"><b>{{articleDescription}}</b></h3>
         <h3 class="article-content">{{articleContent}}</h3>
       </div>
