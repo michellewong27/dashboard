@@ -1,27 +1,5 @@
-# Dashboard
+# Covid Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+Description: The Covid Dashboard was designed to inform individuals on different aspects of Covid during the pandemic. This includes retrieving public Covid-19 data such as the daily death increasement rate. Users can categorize updates on the effects of Covid in each state. This information is generated from the Covid Tracking API. Users can navigate to view news articles published related to Covid-19 as well as check out insightful blog posts that aid to help the mind during the pandemic. 
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This application was developed in Angular 11 utilizing TypeScript, SCSS, Angular Material, Chart.js with ng-2 Charts
