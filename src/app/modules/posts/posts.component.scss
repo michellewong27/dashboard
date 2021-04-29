@@ -1,3 +1,4 @@
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -10,6 +11,7 @@ a:hover {
 }
 .round {
   border-radius: 50%;
+  padding: 0.75rem;
 }
 .previous {
   background-color: #f1f1f1;
@@ -17,7 +19,12 @@ a:hover {
 }
 
 .article-text{
-  display:inline-block;
-  text-align: center;
-  padding: 3rem;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.article-img{
+  height: 24rem;
+  width: 800px;
+
 }

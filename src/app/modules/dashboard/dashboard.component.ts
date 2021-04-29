@@ -9,7 +9,7 @@ export interface PeriodicElement {
   symbol: string;
 }
 
-//change to data-> top 20 small businesses thriving during pandemic
+//change to data-> by state
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},

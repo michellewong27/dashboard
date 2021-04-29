@@ -15,8 +15,9 @@ export class PostsComponent implements OnInit {
   articleOpen:boolean = true;
   articleContent: string = '';
   articleTitle: string = '';
-  articleAuthor:string='';
-  apiUrl: string = 'https://newsapi.org/v2/top-headlines?country=us&q=covid&from=2021-03-28&sortBy=publishedAt&apiKey='
+  articleDescription:string ='';
+  articleImg:string = '';
+  apiUrl: string = 'https://newsapi.org/v2/top-headlines?country=us&q=covid&sortBy=publishedAt&apiKey='
   apiKey : string = 'b0007f2a7ae04cbaa585b2b20903763f'
 
   constructor(private httpClient: HttpClient) { }
@@ -28,14 +29,18 @@ export class PostsComponent implements OnInit {
   getArticles(){
     this.httpClient.get<any>(this.apiUrl + this.apiKey).subscribe(resp => {
       this.articles = resp.articles;
+       console.log(this.articles)
     })
+   
   }
 
-  openArticle(articleTitle:string, articleContent:string, articleAuthor:string){
+  openArticle(articleTitle:string, articleDescription:string, articleContent:string, articleImg:string){
     this.articleOpen = !this.articleOpen;
     this.articleTitle = articleTitle;
-    this.articleAuthor= articleAuthor;
+    this.articleDescription = articleDescription;
     this.articleContent = articleContent;  
+    this.articleImg= articleImg;
+  
   }
 
   backToHomepage(){
